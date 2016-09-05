@@ -1,4 +1,9 @@
 
+/*=========================
+GENERAL
+===========================*/
+
+
 * {
   box-sizing: border-box;
 }
@@ -7,17 +12,6 @@ body {
   padding: 0;
   margin: 0;
   font-family: 'Merriweather', serif;
-}
-
-header{
-  width: 100%;
-  top: 0;
-  background: #102c3a;
-  color: #fff;
-  padding: 1.75em 0;
-  text-align: center;
-  text-transform: uppercase;
-  font-size: .75em;
 }
 
 .container {
@@ -29,6 +23,21 @@ header{
   content: "";
   display: table;
   clear: both;
+}
+
+/*=======================
+MAIN HEADER
+==========================*/
+
+header{
+  width: 100%;
+  top: 0;
+  background: #102c3a;
+  color: #fff;
+  padding: 1.75em 0;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: .75em;
 }
 
 .signup {
@@ -56,13 +65,40 @@ p, label.news {
   border-bottom: 4px solid #000;
 }
 
+/*=====================
+Double Line Border
+=======================*/
+
 div:nth-of-type(2) {
   border-top: 2px solid #000;
   margin-top: 4px;
 }
 
+/*======================
+FIELDS
+======================*/
+
 .contact {
   border-bottom: 2px solid #000;
+}
+
+input[type="email"],
+input[type="text"]:-moz-placeholder {
+    text-align: right;
+    font-family: serif;
+    font-style: italic;
+}
+input[type="email"],
+input[type="text"]:-ms-input-placeholder {
+    text-align: right;
+    font-family: serif;
+    font-style: italic;
+}
+input[type="email"],
+input[type="text"]::-webkit-input-placeholder {
+    text-align: right;
+    font-family: serif;
+    font-style: italic;
 }
 
 fieldset {
@@ -82,6 +118,10 @@ legend {
   color: #62676b;
   font-size: 1em;
   font-family: serif;
+}
+
+fieldset label:first-of-type {
+  margin-bottom: 1em;
 }
 
 input[type="text"],
@@ -117,9 +157,18 @@ select {
 
 input:focus,
 select:focus,
-       {
+textarea:focus {
   border: 2px solid #1f6aa7;
 }
+
+button:hover, button:focus {
+  background: #158479;
+  color: #FFFBCC;
+}
+
+/*=====================
+CHECKBOXES
+=======================*/
 
 input[type="checkbox"] {
   color: #eee;
@@ -179,6 +228,47 @@ button {
 p.italic {
   font-style: italic;
   color: #62676b;
+}
+
+
+/*========================
+MEDIA QUERIES
+=========================*/
+
+@media (min-width: 759px) {
+  .container {
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="telephone"],
+  select {
+    margin-left: 8em;
+    width: 80%;
+    margin-top: 20px;
+  }
+
+  .contact label {
+    display: block;
+    position: absolute;
+    margin-top: 30px;
+  }
+
+  #zip {
+    width: 30%;
+  }
+
+  textarea {
+    width: 100%;
+  }
+
+  input:focus,
+  select:focus,
+  textarea:focus {
+    border: 2px solid #1f6aa7;
+  }
 }
 
 
