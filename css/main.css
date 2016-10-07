@@ -82,19 +82,19 @@ FIELDS
   border-bottom: 2px solid #000;
 }
 
-input[type="email"],
+input[type="email"]:-moz-placeholder,
 input[type="text"]:-moz-placeholder {
     text-align: right;
     font-family: serif;
     font-style: italic;
 }
-input[type="email"],
+input[type="email"]:-ms-input-placeholder,
 input[type="text"]:-ms-input-placeholder {
     text-align: right;
     font-family: serif;
     font-style: italic;
 }
-input[type="email"],
+input[type="email"]::-webkit-input-placeholder,
 input[type="text"]::-webkit-input-placeholder {
     text-align: right;
     font-family: serif;
@@ -126,7 +126,7 @@ fieldset label:first-of-type {
 
 input[type="text"],
 input[type="email"],
-input[type="telephone"],
+input[type="tel"],
 textarea,
 select {
   background: rgba(255,255,255,0.1);
@@ -159,6 +159,7 @@ input:focus,
 select:focus,
 textarea:focus {
   border: 2px solid #1f6aa7;
+  background-color: #FFFBCC;
 }
 
 button:hover, button:focus {
@@ -243,7 +244,7 @@ MEDIA QUERIES
 
   input[type="text"],
   input[type="email"],
-  input[type="telephone"],
+  input[type="tel"],
   select {
     margin-left: 8em;
     width: 80%;
