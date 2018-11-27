@@ -20,15 +20,15 @@
             <p>Get the latest news on how your code is doing right in your inbox</p>
         </div> <!--announcement-->
         <div class="form-wraper">
-          <form>
+          <form class="main-form">
             <div class="contact">
               <fieldset>
                 <legend>Contact Information</legend>
                 <label for="name">Full Name</label>
-                <input type="text" placeholder="Required" id="name" name="user_name">
+                <input type="text" placeholder="Required" id="name" name="user_name" required>
 
                 <label for="email">Email Address</label><br>
-                <input type="email" placeholder="Required" id="email" name="user_email">
+                <input type="email" placeholder="Required" id="email" name="user_email" required>
 
                 <label for="tel">Phone Number</label><br>
                 <input type="tel" id="tel" name="user_tel">
@@ -107,14 +107,13 @@
                 <input type="checkbox" id="css" value="css_news" name="user_interest"><label for="css" class="check">CSS News</label><br>
 
                 <input type="checkbox" id="js" value="js_news" name="user_interest"><label for="js" class="check">Javascript News</label><br>
-                <article class="format">
+                <div class="format">
                   <label>Newsletter Fotmat</label><br>
                   <input type="radio" id="hyper-text" value="html_format" name="user_choice"><label for="hyper-text" class="radio">HTML</label><br>
                   <input type="radio" id="text" value="plain_text" name="user_choice"><label for="text" class="radio">Plain text</label><br>
-                  <label>Other topics you'd like to hear about</label>
-                </article>
-                <textarea>
-                </textarea>
+                  <label placeholder="I'd like to hear about...">Other topics you'd like to hear about</label>
+                </div>
+                <textarea placeholder="I'd like to hear..." id="text_area"  name="user_topics"> </textarea>
                 <button type="submit">Sign Up</button>
                 <p class="italic">Copyright The Code Review</p>
             </fieldset>
